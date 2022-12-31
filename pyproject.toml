@@ -1,0 +1,23 @@
+[project]
+name = "mudconsole"
+version = "0.0.1"
+dependencies = [
+    "textual",
+    "rich",
+    "textual_inputs",
+]
+
+[project.scripts]
+mudconsole = "mudconsole:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+namespaces = false
+
+[tool.pylint."messages control"]
+disable = ["fixme"]
